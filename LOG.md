@@ -4,6 +4,32 @@
 
 ---
 
+## Сессия #10 — 2026-02-27
+
+**Модуль:** 2 — GitHub Issues как единица работы
+**Урок:** 2.4 — Labels, milestones, assignees: организация
+
+**Что сделали:**
+- Разобрали три инструмента организации Issues: Labels, Milestones, Assignees
+- Удалили 6 ненужных дефолтных labels (duplicate, invalid, question, wontfix, help wanted, good first issue)
+- Переименовали `enhancement` → `feature` — стандарт индустрии
+- Создали 4 новых label: `chore`, `priority: high`, `priority: low`, `agent-task`
+- Создали первый Milestone "Module 2: Issues" через `gh api`
+- Привязали Issue #11 к milestone и назначили assignee через `gh issue edit`
+- Попробовали фильтрацию: `--milestone`, `--label`, `--assignee @me`
+
+**Ключевые инсайты:**
+- Labels бывают двух типов: категория (bug, feature, chore) и атрибут (priority: high, agent-task)
+- `{owner}/{repo}` в `gh api` — не плейсхолдеры, а встроенный синтаксис автоподстановки из текущего git remote
+- `@me` — шорткат для своего аккаунта в `gh` CLI
+- `label:bug label:"priority: high"` — фильтрация по нескольким labels одновременно
+- Вся организация (labels, milestones, assignees) нужна ради фильтрации при 50+ задачах
+
+**Время:** ~30 мин
+**Следующий шаг:** Модуль 2, Урок 2.5 — Практика: оформить 5 реальных задач как Issues
+
+---
+
 ## Сессия #9 — 2026-02-27
 
 **Модуль:** 2 — GitHub Issues как единица работы
