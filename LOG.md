@@ -4,6 +4,30 @@
 
 ---
 
+## Сессия #5 — 2026-02-27
+
+**Модуль:** 1 — Основы Git Workflow
+**Урок:** 1.4 — Branch Protection Rules: защита main
+
+**Что сделали:**
+- Разобрали зачем нужны Branch Protection Rules (запрет push в main, принудительный PR)
+- Изучили Rulesets — новый формат правил GitHub (замена старым branch protection rules)
+- Сделали репозиторий публичным (rulesets бесплатны только для public repos)
+- Создали ruleset через `gh api` с правилом: все изменения в main только через PR
+- Проверили защиту: push в main отклонён с ошибкой `Changes must be made through a pull request`
+- Откатили тестовый коммит через `git reset --soft HEAD~1`
+
+**Ключевые инсайты:**
+- Rulesets для приватных репозиториев требуют GitHub Pro — для учебного репо проще сделать публичным
+- `current_user_can_bypass: "never"` — даже владелец подчиняется правилам, это важно для дисциплины
+- `--accept-visibility-change-consequences` — GitHub CLI требует явного подтверждения при смене видимости репо
+- `git reset --soft HEAD~1` — откатывает коммит, сохраняя файлы в staging. Полезно для отмены ошибочных коммитов
+
+**Время:** ~30 мин
+**Следующий шаг:** Модуль 1, Урок 1.5 — Практика: полный цикл branch → PR → review → merge
+
+---
+
 ## Сессия #4 — 2026-02-27
 
 **Модуль:** 1 — Основы Git Workflow
