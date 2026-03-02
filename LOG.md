@@ -4,6 +4,32 @@
 
 ---
 
+## Сессия #12 — 2026-03-02
+
+**Модуль:** 3 — GitHub Projects и приоритизация
+**Урок:** 3.1 — GitHub Projects v2: создание доски, виды, фильтры
+
+**Что сделали:**
+- Создали GitHub Project "Personal Corp Learning" через веб-интерфейс
+- Импортировали все открытые Issues из `personal-corp-learning` при создании (галочка Import items from repository)
+- Изучили вид **Board**: 6 Issues автоматически попали в колонку Todo
+- Создали вид **Table**: те же данные в виде таблицы с колонками Title, Assignees, Status, Linked PR
+- Попробовали фильтрацию: `assignee:@me` (все 6), `label:documentation` (4 из 6)
+- Переименовали View 1 → `Board`, View 2 → `Table`
+
+**Ключевые инсайты:**
+- Project живёт на уровне пользователя, не репозитория — может агрегировать Issues из разных репо
+- Board и Table — это не разные данные, а разные "линзы" над одним набором Items
+- Status — встроенное поле Projects v2, именно оно определяет колонку на Board
+- Фильтры в Projects используют тот же синтаксис что и в Issues: `assignee:@me`, `label:documentation`
+- Имя лейбла в фильтре — полное (`documentation`), а не префикс (`docs`)
+- Галочка "Import items from repository" при создании проекта — быстрый способ добавить все открытые Issues сразу
+
+**Время:** ~30 мин
+**Следующий шаг:** Модуль 3, Урок 3.2 — Kanban workflow: Backlog → In Progress → Review → Done
+
+---
+
 ## Сессия #11 — 2026-03-02
 
 **Модуль:** 2 — GitHub Issues как единица работы
