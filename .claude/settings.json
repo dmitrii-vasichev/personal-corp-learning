@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "command": ".claude/hooks/stop-move-to-review.sh"
+      }
+    ]
+  }
+}
