@@ -4,6 +4,33 @@
 
 ---
 
+## Сессия #28 — 2026-03-02
+
+**Модуль:** 7 — Оркестрация и Personal Corp
+**Урок:** 7.2 — GitHub Agentic Workflows: автоматизация через Markdown
+
+**Что сделали:**
+- Разобрали концепцию Agentic Workflows: автоматизация через Markdown-инструкции вместо YAML-логики
+- Сравнили классические GitHub Actions (детерминированный скрипт) с Agentic Workflows (агент принимает решения)
+- Изучили архитектуру: YAML = триггер + permissions, Markdown = бизнес-логика на естественном языке
+- Разобрали 4 паттерна: Auto-Implement, Auto-Review, Comment Commands, Stale Cleanup
+- Изучили ключевой компонент `anthropics/claude-code-action@v1` — GitHub Action для запуска Claude
+- Создали Agentic Workflow для Task Manager: `agentic.yml` (триггер на Issue) + `on-issue-created.md` (промпт для Auto-Implement)
+- Исправили две проблемы: добавили явные `permissions` и запреты "НЕ мержь / НЕ аппрувь" в промпт
+- Обсудили почему auto-implement + auto-merge — опасно: компаундирование галлюцинаций, отсутствие контрольной точки, каскадный blast radius
+
+**Ключевые инсайты:**
+- Логика стала человекочитаемой и живёт отдельно от инфраструктуры: YAML — "когда и с какими правами", Markdown — "что делать"
+- Порядок шагов в Agentic Workflow не предопределён — он emergence от LLM. Это и сила, и риск
+- `permissions` в YAML — тот же принцип наименьших привилегий, что и `--allowedTools` в headless-режиме
+- Отсутствие запрета в промпте = неявное разрешение. Агент буквально исполняет инструкцию — явные "НЕ делай X" обязательны
+- Правило безопасности: auto-implement + human review = хорошо, auto-implement + auto-merge = каскадный отказ
+
+**Время:** ~30 мин
+**Следующий шаг:** Модуль 7, Урок 7.3 — Финальная практика: полный цикл Personal Corp
+
+---
+
 ## Сессия #27 — 2026-03-02
 
 **Модуль:** 7 — Оркестрация и Personal Corp
