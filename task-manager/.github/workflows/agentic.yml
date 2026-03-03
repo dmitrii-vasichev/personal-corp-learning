@@ -1,0 +1,21 @@
+name: Agentic Issue Handler
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  handle-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          prompt_file: .github/prompts/on-issue-created.md
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
